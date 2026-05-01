@@ -297,6 +297,58 @@
       color: #9aaac4;
       margin-top: 3px;
     }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      body { padding: 0 0 6rem; }
+
+      .flyer { box-shadow: none; }
+
+      .flyer-header { padding: 2rem 1.5rem 1.75rem; }
+      .hero-title { font-size: 26px; }
+      .hero-body { font-size: 14px; }
+      .hero-stats { gap: 1.25rem; flex-wrap: wrap; }
+      .stat-num { font-size: 22px; }
+
+      .timeline-section { padding: 1.5rem; }
+      .timeline-track { flex-direction: column; gap: 16px; }
+      .tl-item { padding-right: 0; }
+      .tl-top { display: none; }
+      .tl-time { font-size: 10px; margin-bottom: 6px; }
+      .tl-services { flex-direction: row; flex-wrap: wrap; }
+
+      .services-section { padding: 1.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card.full { grid-column: 1; }
+
+      .why-section { padding: 1.5rem; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-title { font-size: 18px; }
+
+      .flyer-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25rem 1.5rem;
+        gap: 0.75rem;
+      }
+      .footer-contact { text-align: left; }
+
+      /* Pricing */
+      .flyer > div[style*="f5f8fc"] > div[style*="grid"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Chat window */
+      #chat-window {
+        width: calc(100vw - 2rem) !important;
+        right: 1rem !important;
+        bottom: 5rem !important;
+      }
+      #chat-btn {
+        right: 1rem !important;
+        bottom: 1rem !important;
+      }
+    }
   </style>
 </head>
 <body>
