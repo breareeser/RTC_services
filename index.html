@@ -596,8 +596,9 @@
 <!-- CHAT WINDOW -->
 <div id="chat-window" style="
   display: none;
-  position: fixed; bottom: 6rem; right: 1rem;
-  width: calc(100vw - 2rem); max-width: 360px; max-height: 75vh;
+  position: fixed;
+  bottom: 6rem; right: 1rem;
+  width: 360px; max-height: 520px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.18);
@@ -606,6 +607,19 @@
   overflow: hidden;
   flex-direction: column;
 ">
+<style>
+  @media (max-width: 480px) {
+    #chat-window {
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      max-height: 100% !important;
+      border-radius: 0 !important;
+    }
+  }
+</style>
   <!-- Chat Header -->
   <div style="background: #1a2a4a; padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between;">
     <div style="display: flex; align-items: center; gap: 10px;">
@@ -628,6 +642,13 @@
     max-height: 340px; min-height: 280px;
     background: #f9fafc;
   ">
+  <style>
+    @media (max-width: 480px) {
+      #chat-messages {
+        max-height: calc(100vh - 160px) !important;
+      }
+    }
+  </style>
     <div style="display: flex; gap: 8px; align-items: flex-start;">
       <div style="width: 28px; height: 28px; background: #e67e22; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
